@@ -33,6 +33,7 @@
 
   vc = [[SFSafariViewController alloc] initWithURL:url entersReaderIfAvailable:readerMode];
   vc.delegate = self;
+  vc.modalPresentationStyle = UIModalPresentationPageSheet;
 
   bool hidden = [options[@"hidden"] isEqualToNumber:[NSNumber numberWithBool:YES]];
   if (hidden) {
